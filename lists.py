@@ -380,13 +380,15 @@ orig
 def find_letter_indices(words, letter):
 
 
-    new_wordList = set()
-    i = 0
-    for letter in range(len(words)):
-        if words[i]== letter:
-            new_wordList.append()
-            return i 
-find_letter_indices(['odd', 'dog', 'who'], 'o')        
+    new_wordList = []
+    for i in range(len(words)):
+        if letter in words[i]:
+            new_wordList.append(i)
+
+        else:
+            new_wordList.append(None)
+    return new_wordList
+print(find_letter_indices(['odd', 'dog', 'who', 'paul', 'lynne', 'wow'], 'o'))      
          
 
 
